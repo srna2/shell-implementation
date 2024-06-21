@@ -1,0 +1,17 @@
+~FORKBOMB~
+
+~Since it is very risky to run a program including forkbomb, especially considering our limited machine resources, we decided to explain the forkbomb principle and how it could be implemented in details in this file. 
+
+~The fork bomb is a hazardous type of DoS attack that targets systems running Linux or Unix. By taking advantage of the fork function, this attack quickly creates an excessive number of child processes, taxing the CPU, memory, and process table entries of the system. For testing user process constraints, sysadmins may utilize similar tactics, but the real threat posed by a fork bomb is its capacity to bring down an entire system. It is feasible to counteract such attacks via Linux process limitations, but once a fork bomb is detonated, regular operation is nearly impossible to maintain without a system reset. The use of a fork bomb may seem insignificant, yet it can have serious consequences. Fork bombs are easy to experiment with because of their efficiency and simplicity, but it's important to remember that running such code on any system is quite dangerous, especially if it's a shared or vital machine. Uncontrolled process growth can quickly cause a system to become unusable, impacting other users or services, resulting in downtime and data loss. Therefore, it's imperative to use caution and avoid running fork bomb code anywhere else than in situations that are under control and where the effects can be carefully monitored and lessened. In the C programming language, we would implement it like this:
+
+#include <unistd.h>
+
+int main() {
+    while(1) {
+        fork();
+    }
+    return 0;
+}
+
+~The fork() function is invoked in an infinite loop, generating new child processes with each call and exponentially increasing the number of processes until system resources are fullz occupied. 
+
