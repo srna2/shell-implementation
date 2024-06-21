@@ -1,9 +1,3 @@
-    📍️  UNIVERSITY : IBU, FENMS, IT - IT 204 Operating Systems - Project 1 (2)
-    📅️  DATE : March 2024, Sarajevo
-
-    👥️  TEAM MEMBERS : Belma Sehic*, Amina Srna*
-    👥️  CONTACT : belma.sehic@stu.ibu.edu.ba* , amina.srna@stu.ibu.edu.ba*
-
     📁️  FILES INCLUDED : task1 (basic, advanced), task2 (basic, intermediate, advanced), task3 (basic, intermediate, forkbomb), task4 along with screenshots for better representation of every task
 
     🌐️  SOURCES : GeeksForGeeks, StackOverflow, ChatGPT, LMS Materials...
